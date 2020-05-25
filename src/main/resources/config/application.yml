@@ -1,0 +1,18 @@
+#spring-Boot的配置文件有两种：application.properties和application.yml
+#优先级分为几种情况：
+#   1、两者application.properties > application.yml只能放在项目的根路径下和
+#      类路径(即resources下)，放在根路径下 > 类路径下的。而放在两个路径中的config文件夹下
+#      的优先级又 > 不放在config文件夹下的。一般来说，配置文件只放在resources下
+#   2、两者放在同一路径下的同一目录时，application.properties > application.yml
+server:
+  port: 8080
+#yaml的数据类型表示；
+  #1、对象
+person:
+    lastName: 悦
+    firstName: 李
+    birth: 2020/5/10
+    maps: {k1: v1,k2: v2}
+    list:
+      - lisi
+      - wangwu
